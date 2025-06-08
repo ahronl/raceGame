@@ -1,8 +1,8 @@
 package infra
 
 import (
-	"example/hello/internal/entity"
 	"fmt"
+	"game/raceCar/internal/entity"
 )
 
 type stdOut struct{}

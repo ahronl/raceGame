@@ -1,8 +1,8 @@
 package main
 
 import (
-	"example/hello/internal/entity"
-	"example/hello/internal/infra"
+	"game/raceCar/internal/entity"
+	"game/raceCar/internal/infra"
 )
 
 func main() {
