@@ -35,7 +35,9 @@ func (u *GameState) BuildAlfa() {
 }
 
 func (u *GameState) BuildBMW() {
-
+	bmw := NewBmw(u.road, u.displayer)
+	u.cars = append(u.cars, bmw)
+	u.displayer.ShowNewCar(bmw)
 }
 
 func (u *GameState) SetRoad() {
