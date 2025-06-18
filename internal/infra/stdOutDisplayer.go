@@ -18,3 +18,6 @@ func (s *stdOut) ShowCarDrivingAt(speed float32) {
 func (s *stdOut) ShowNewCar(car entity.Car) {
 	fmt.Printf("a new car was born %+v \n", car)
 }
+func (s *stdOut) ShowRoad(road entity.Road) {
+	fmt.Printf("a new road was chosen %+v \n", road)
+}

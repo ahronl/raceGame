@@ -10,4 +10,5 @@ type Car interface {
 type Displayer interface {
 	ShowCarDrivingAt(speed float32)
 	ShowNewCar(car Car)
+	ShowRoad(road Road)
 }
