@@ -25,7 +25,11 @@ func (s *stdIn) RunLoop() {
 		case "exit":
 			return
 		case "track":
-			s.game.SetRoad()
+			s.game.SetRoad("track")
+		case "highway":
+			s.game.SetRoad("highway")
+		case "city":
+			s.game.SetRoad("city")
 		case "race":
 			s.game.RaceCars()
 		case "alfa":
@@ -33,6 +37,7 @@ func (s *stdIn) RunLoop() {
 		case "bmw":
 			s.game.BuildBMW()
 		default:
+			fmt.Println("Invalid command")
 		}
 	}
 }

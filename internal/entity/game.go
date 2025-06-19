@@ -2,7 +2,7 @@ package entity
 
 // this is a port
 type Game interface {
-	SetRoad()
+	SetRoad(string)
 	RaceCars()
 	BuildAlfa()
 	BuildBMW()
@@ -35,8 +35,19 @@ func (u *GameState) BuildAlfa() {
 }
 
 func (u *GameState) BuildBMW() {
-
+	bmw := NewBmw(u.road, u.displayer)
+	u.cars = append(u.cars, bmw)
+	u.displayer.ShowNewCar(bmw)
 }
 
-func (u *GameState) SetRoad() {
+func (u *GameState) SetRoad(roadtype string) {
+	if roadtype == "track" {
+		u.road = NewRaceTrack()
+	} else if roadtype == "highway" {
+		u.road = NewHighWay()
+	} else if roadtype == "city" {
+		u.road = NewCityRoad()
+	}
+
+	u.displayer.ShowRoad(*u.road)
 }
